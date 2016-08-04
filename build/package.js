@@ -1,0 +1,11 @@
+export var name = "vega-dataflow";
+export var version = "2.0.0";
+export var description = "Reactive dataflow processing.";
+export var keywords = ["vega","dataflow","reactive"];
+export var license = "BSD-3-Clause";
+export var author = {"name":"Jeffrey Heer","url":"http://idl.cs.washington.edu"};
+export var main = "build/vega-dataflow.js";
+export var repository = {"type":"git","url":"https://github.com/uwdata/vega-dataflow.git"};
+export var scripts = {"build":"npm run test && uglifyjs build/vega-dataflow.js -c -m -o build/vega-dataflow.min.js","pretest":"rm -rf build && mkdir build && json2module package.json > build/package.js && node bin/rollup","test":"tape 'test/**/*-test.js' && eslint index.js src test"};
+export var dependencies = {"d3-array":"1","d3-collection":"1","d3-force":"1","d3-format":"1","d3-geo":"1","d3-hierarchy":"1","d3-scale":"1","d3-scale-chromatic":"1","d3-voronoi":"1","vega-statistics":"git://github.com/uwdata/vega-statistics","vega-util":"git://github.com/uwdata/vega-util"};
+export var devDependencies = {"eslint":"2","json2module":"0.0","rollup":"0.34","rollup-plugin-node-resolve":"1","tape":"4","uglify-js":"2"};
